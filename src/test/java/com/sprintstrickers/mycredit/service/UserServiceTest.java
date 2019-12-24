@@ -64,11 +64,11 @@ public class UserServiceTest {
 	}
 
 	
-//	@Test(expected=AgeNotValidException.class)
-//	public void testRegisterUserNegative() throws AgeNotValidException { 
-//	userRequestDto.setDob(LocalDate.of(2000, 9, 22));
-//	Mockito.when(Validator.ageValidation(userRequestDto.getDob())).thenReturn(19);
-//		userService.registerUser(userRequestDto);
-//	 }
+	@Test(expected=AgeNotValidException.class)
+	public void testRegisterUserNegative() throws AgeNotValidException { 
+	userRequestDto.setDob(LocalDate.of(2000, 9, 22));
+	Mockito.when(Validator.ageValidation(userRequestDto.getDob())).thenReturn(19);
+		userService.registerUser(userRequestDto);
+	 }
 	   
 }
