@@ -22,6 +22,11 @@ import com.sprintstrickers.mycredit.repository.CreditCardAccountRepository;
 import com.sprintstrickers.mycredit.repository.UserRepository;
 import com.sprintstrickers.mycredit.util.Validator;
 
+/**
+ * @author Sri Keerthna
+ * @since 2019-12-23
+ */
+
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class UserServiceTest {
 
@@ -48,6 +53,12 @@ public class UserServiceTest {
 		user.setUserId(1);
 	}
 
+/**
+ * @author Sri Keerthna
+ * @since 2019-12-23
+ * This method is for positive test case of user registration.
+ */
+
 	@Test
 	public void testRegisterUserPositive() throws AgeNotValidException {
 		BeanUtils.copyProperties(userRequestDto, user);
@@ -63,7 +74,12 @@ public class UserServiceTest {
 		assertEquals(12345678L, responseDto.getCreditCardNumber());
 	}
 
-	
+/**
+ * @author Sri Keerthna
+ * @since 2019-12-23
+ * This method is for Negative test case of user registration.
+ */
+
 	@Test(expected=AgeNotValidException.class)
 	public void testRegisterUserNegative() throws AgeNotValidException { 
 	userRequestDto.setDob(LocalDate.of(2000, 9, 22));

@@ -19,6 +19,11 @@ import com.sprintstrickers.mycredit.exception.AgeNotValidException;
 import com.sprintstrickers.mycredit.service.UserService;
 import com.sprintstrickers.mycredit.util.ApiConstant;
 
+/**
+ * @author Sri Keerthna
+ * @since 2019-12-23
+ */
+
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class UserControllerTest {
 
@@ -40,6 +45,12 @@ public class UserControllerTest {
 		
 		userRequestDto.setUserName("abc");
 	}
+
+/**
+ * @author Sri Keerthna
+ * @since 2019-12-23
+ * This method is for positive test case of user registration.
+ */
 
 	@Test
 	public void testregisterUserPositive() throws AgeNotValidException {
